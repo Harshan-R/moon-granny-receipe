@@ -1,38 +1,319 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*   background-color: black; */
+}
+.container {
+  width: 90vw;
+  margin: 50px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 15% 60% 25%;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+  /*   background-color: #F0F8FF; */
+}
+
+/* .box{
+        border: 2px solid black;
+        background-color: rgb(228, 188, 228);
+        padding: 23px;
+} */
+
+.header {
+  grid-column: 1/-1;
+  /*   background-color: #FAEBD7; */
+}
+
+h2 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 3vw;
+  padding-left: 1em;
+}
+
+.main {
+  grid-row: 2;
+  grid-column: 2/3;
+  font-family: "Abril Fatface", cursive;
+  font-size: 5.2vw;
+  padding-left: 1em;
+  /*   background-color: #5F9EA0; */
+}
+
+.misc {
+  grid-row: 2;
+  grid-column: 3/-1;
+  padding: 1em;
+  padding-right: 40%;
+}
+
+.misc h5 {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: .9vw;
+  color: black;
+  line-height: 1.6;
+}
+
+.line {
+  width: 5em;
+  height: 4px;
+  background-color: #ff4e4e;
+  margin: 20px 0;
+}
+
+.cart {
+  grid-column: 1/2;
+}
+
+.carticon img {
+  width: 40%;
+  display: none;
+}
+
+.cart button {
+  width: 9em;
+  height: 3em;
+  background-color: #ff4e4e;
+  display: block;
+  border-radius: 50px;
+  margin: 0px 10px;
+  padding: 10px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
   color: white;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.cart button:hover {
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.24), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h4 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1em;
+  font-family: "Inter", sans-serif;
+}
+
+.nav {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  /*   background-color: lightblue; */
+}
+
+.navicon img {
+  width: 50%;
+  display: none;
+}
+
+ul {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  list-style-type: none;
+  text-align: left;
+  font-weight: 200;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 1.5em 2em;
+  margin: 1em 0;
+  text-decoration: none;
+}
+
+li a h6 {
+  font-size: 1em;
+  text-decoration: line-through;
+  text-decoration-color: red;
+  font-weight: 200;
+}
+
+li a:hover {
+  text-shadow: 1px 1px #000;
+}
+
+.menu {
+  grid-column: 2/5;
+  grid-row: 3/-1;
+  /*   background-color: #A9A9A9; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1em;
+  padding-top: 5%;
+}
+
+.cardView {
+  background-color: #fff;
+  border-radius: 9%;
+  padding: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardView:hover {
+  background-color: #e6e6e6;
+}
+/* 
+.cardViewhn {
+  background-color: #fff;
+  border-radius: 9%;
+  padding: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardViewhn:hover {
+  background-color: #e6e6e6;
+} */
+
+.item img {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  display: block;
+  margin: 10% auto;
+}
+
+.name h5 {
+  text-align: center;
+  color: #000;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  padding-top: 15%;
+}
+
+/* ============================================ */
+/* ============================================ */
+/* ============================================ */
+/* MEDIA QUERIES */
+/* ============================================ */
+/* ============================================ */
+/* ============================================ */
+@media screen and (max-width: 800px) {
+  .container {
+    width: 90vw;
+    margin: 50px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 10px;
+    /*     background-color: #f0f8ff; */
   }
-  to {
-    transform: rotate(360deg);
+
+  .header {
+    grid-column: 2/3;
+    height: 8vw;
+/*         background-color: #faebd7; */
+  }
+  h2 {
+    font-family: "Abril Fatface", cursive;
+    font-size: 4vw;
+    text-align: center;
+    height: 5vw;
+    overflow: hidden;
+  }
+
+  .nav {
+    display: none;
+    /*   background-color: lightblue; */
+  }
+
+  .navicon {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /*     background-color: #faebd5; */
+  }
+  .navicon img {
+    display: inline-block;
+    width: 70%;
+    height: 90%;
+  }
+
+  .cart {
+    display: none;
+  }
+  .carticon {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    /*     background-color: #faebd5; */
+  }
+  .carticon img {
+    display: inline-block;
+    width: 70%;
+    height: 90%;
+  }
+
+  .main {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    font-family: "Abril Fatface", cursive;
+    font-size: 7vw;
+    padding: 1em 2.5em 1em 0em;
+    /*   background-color: #5F9EA0; */
+  }
+  .menu {
+    grid-column: 1/4;
+    grid-row: 3/5;
+    /*   background-color: #A9A9A9; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 3em;
+    padding: 5%;
+    max-height: 98vw;
+    overflow: hidden;
+  }
+
+  .cardView {
+    background-color: #fff;
+    border-radius: 9%;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .cardView:hover {
+    background-color: #e6e6e6;
+  }
+
+  .item img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    display: block;
+    margin: 10% auto;
+  }
+
+  .name h5 {
+    text-align: center;
+    color: #000;
+    font-size: 3vw;
+    font-family: "Inter", sans-serif;
+    padding-top: 5%;
+  }
+
+  .misc {
+    grid-row: 5/-1;
+    grid-column: 1/4;
+    padding: 10% 1.3em;
+  }
+
+  .misc h5 {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 4vw;
+    color: black;
+    line-height: 1.6;
+  }
+
+  .line {
+    width: 9em;
+    height: 4px;
+    background-color: #ff4e4e;
+    margin: 20px 0;
   }
 }
